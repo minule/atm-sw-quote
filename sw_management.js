@@ -304,7 +304,7 @@ function initializeEventHandlers() {
                 '응용 SW': '응용 SW',
 				'국가': '국가',
 				'고객': '고객',
-                'ATM 대수': 'atm_count'
+                '납품대수': 'atm_count'
             };
 
             let addedCount = 0;

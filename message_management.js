@@ -1,5 +1,5 @@
 let db = {};
-const HEADERS = ['다국어코드','한국어', '영어','구분'];
+const HEADERS = ['메세지코드','한국어', '영어','구분'];
 
 window.initializePage = function(db_from_parent) {
     db = db_from_parent;
@@ -24,7 +24,7 @@ function renderMessageTable() {
         table += '<tr><td colspan="5" class="placeholder">메시지가 없습니다. \'추가\' 버튼으로 새 메시지를 등록하세요.</td></tr>';
     } else {
         db.다국어관리.forEach(item => {
-            table += `<tr data-message-code="${item.다국어코드}">`;
+            table += `<tr data-message-code="${item.메세지코드}">`;
             HEADERS.forEach(h => table += `<td>${item[h] || ''}</td>`);
             table += `
                 <td class="item-actions">
@@ -43,7 +43,7 @@ function createEditRow(item, isNew = false) {
     let row = `<tr class="edit-item-row" data-is-new="${isNew}">`;
     HEADERS.forEach(h => {
         const value = item[h] || '';
-        const isDisabled = !isNew && h === '다국어코드' ? 'disabled' : '';
+        const isDisabled = !isNew && h === '메세지코드' ? 'disabled' : '';
         row += `<td><input type="text" name="${h}" value="${value}" ${isDisabled}></td>`;
     });
     row += `
@@ -78,7 +78,7 @@ function initializeEventListeners() {
         if ($(container).find('.edit-item-row').length > 0) return alert('편집 중인 항목을 먼저 저장하세요.');
         const $row = $(this).closest('tr');
         const messageCode = $row.data('message-code');
-        const item = db.다국어관리.find(m => m.다국어코드 === messageCode);
+        const item = db.다국어관리.find(m => m.메세지코드 === messageCode);
         const editRowHtml = createEditRow(item, false);
         $row.replaceWith(editRowHtml);
     });
@@ -86,7 +86,7 @@ function initializeEventListeners() {
     container.on('click', '.delete-btn', function() {
         const messageCode = $(this).closest('tr').data('message-code');
         if (confirm(`'${messageCode}' 메시지를 정말 삭제하시겠습니까?`)) {
-            const itemIndex = db.다국어관리.findIndex(m => m.다국어코드 === messageCode);
+            const itemIndex = db.다국어관리.findIndex(m => m.메세지코드 === messageCode);
             if (itemIndex > -1) {
                 db.다국어관리.splice(itemIndex, 1);
                 alert('삭제되었습니다.');
@@ -103,20 +103,20 @@ function initializeEventListeners() {
         $row.find('input').each(function() {
             const name = $(this).attr('name');
             newValues[name] = $(this).val();
-            if (name === '다국어코드' && !newValues[name]) isValid = false;
+            if (name === '메세지코드' && !newValues[name]) isValid = false;
         });
 
-        if (!isValid) return alert('다국어코드는 필수 항목입니다.');
+        if (!isValid) return alert('메세지코드는 필수 항목입니다.');
 
         if (isNew) {
-            if (db.다국어관리.some(m => m.다국어코드 === newValues.다국어코드)) {
+            if (db.다국어관리.some(m => m.메세지코드 === newValues.메세지코드)) {
                 return alert('이미 존재하는 다국어코드입니다.');
             }
             db.다국어관리.push(newValues);
             alert('새 메시지가 추가되었습니다.');
         } else {
-            const messageCode = newValues.다국어코드;
-            const itemIndex = db.다국어관리.findIndex(m => m.다국어코드 === messageCode);
+            const messageCode = newValues.메세지코드;
+            const itemIndex = db.다국어관리.findIndex(m => m.메세지코드 === messageCode);
             if (itemIndex > -1) {
                 db.다국어관리[itemIndex] = newValues;
                 alert('메시지가 수정되었습니다.');
@@ -155,7 +155,7 @@ function handleExcelImport() {
                 return alert(`엑셀 파일의 헤더가 올바르지 않습니다. 다음 열이 필요합니다: ${missingHeaders.join(', ')}`);
             }
 
-            const messageMap = new Map(db.다국어메세지.map(m => [m.메세지코드, m]));
+            const messageMap = new Map(db.다국어관리.map(m => [m.메세지코드, m]));
             let addedCount = 0;
             let updatedCount = 0;
 

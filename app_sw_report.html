@@ -18,22 +18,25 @@
     </style>
 </head>
 <body>
-    <h1>응용 SW 점유율 레포트</h1>
+	<div class="container">
+		<div class="page-header">
+			<h1>응용 SW 점유율 레포트</h1>
+		</div>	
 
-    <div class="panel">
-        <h2>검색 조건</h2>
-        <div id="filters" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-            <!-- JS로 채워질 검색 필터 -->
-        </div>
-        <div class="filter-actions">
-            <button id="search-btn">조회</button>
-        </div>
-    </div>
+		<div class="panel">
+			<h2>검색 조건</h2>
+			<div id="filters" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+				<!-- JS로 채워질 검색 필터 -->
+			</div>
+			<div class="filter-actions">
+				<button id="search-btn">조회</button>
+			</div>
+		</div>
 
-    <div id="report-container" class="report-container">
-        <p class="placeholder">검색 조건을 선택하고 조회 버튼을 눌러주세요.</p>
-    </div>
-
+		<div id="report-container" class="report-container">
+			<p class="placeholder">검색 조건을 선택하고 조회 버튼을 눌러주세요.</p>
+		</div>
+	</div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

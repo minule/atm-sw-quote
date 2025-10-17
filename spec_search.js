@@ -206,7 +206,7 @@ function renderOptimalCombination(results, targetHashes, partPool, targetSpecs) 
 
     const isPerfectMatch = Object.values(optimalParts).every(part => part !== null);
     if (isPerfectMatch) {
-        const tempProductButton = $('<button id="temp-product-button">견적 요청</button>');
+        const tempProductButton = $('<button id="temp-product-button">견적 등록</button>');
         optimalDiv.append(tempProductButton);
     }
 }
