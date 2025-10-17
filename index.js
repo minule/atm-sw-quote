@@ -183,7 +183,7 @@ $(document).ready(function() {
 
     window.handleSystemSave = function(updatedDb) {
         console.log("시스템 CSV 저장 요청 받음");
-        const systemTables = ['그룹코드관리', '코드관리', '메뉴관리', '다국어메세지', '권한목록', '권한별메뉴'];
+        const systemTables = ['그룹코드관리', '코드관리', '메뉴관리', '다국어관리', '권한목록', '권한별메뉴'];
         let csvContent = '';
 
         systemTables.forEach(tableName => {
