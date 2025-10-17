@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>응용 SW 점유율 레포트</title>
+    <link rel="stylesheet" href="dashboard.css"> <!-- 대시보드 CSS 재사용 -->
+    <link rel="stylesheet" href="sw_management.css"> <!-- 일부 스타일 재사용 -->
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f4f7f6; padding: 20px; }
+        h1 { text-align: center; margin-bottom: 30px; color: #2c3e50; }
+        .report-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 20px; }
+        .country-report { background-color: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .country-report h2 { color: #34495e; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; }
+        .chart-container { height: 320px; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; font-size: 14px; min-width: 120px;}
+        thead { background-color: #ecf0f1; }
+    </style>
+</head>
+<body>
+    <h1>응용 SW 점유율 레포트</h1>
+
+    <div class="panel">
+        <h2>검색 조건</h2>
+        <div id="filters" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <!-- JS로 채워질 검색 필터 -->
+        </div>
+        <div class="filter-actions">
+            <button id="search-btn">조회</button>
+        </div>
+    </div>
+
+    <div id="report-container" class="report-container">
+        <p class="placeholder">검색 조건을 선택하고 조회 버튼을 눌러주세요.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="app_sw_report.js"></script>
+</body>
+</html>

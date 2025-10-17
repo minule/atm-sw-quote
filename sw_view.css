@@ -1,0 +1,118 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f7fa;
+    color: #333;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    padding: 20px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+#filters {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-group label {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.filter-group select {
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-width: 180px;
+}
+
+#search-btn {
+    padding: 6px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 31px; /* Match select height */
+}
+
+#search-btn:hover {
+    background-color: #0056b3;
+}
+
+.excel-import-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto; /* Pushes the group to the right */
+}
+
+#excel-file-input {
+    font-size: 12px;
+}
+
+#import-excel-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+#import-excel-btn:hover {
+    background-color: #218838;
+}
+
+#sw-view-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+thead {
+    background-color: #f8f9fa;
+}
+
+th, td {
+    padding: 10px 12px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.placeholder {
+    padding: 40px;
+    text-align: center;
+    color: #888;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공통코드 관리</title>
+    <link rel="stylesheet" href="common_code_management.css">
+</head>
+<body>
+    <div class="container">
+        <div id="group-code-panel" class="panel">
+            <div class="panel-header">
+                <h2>그룹코드 관리</h2>
+                <button id="add-group-btn" class="add-btn">+ 추가</button>
+            </div>
+            <div id="group-code-table-container" class="table-container"></div>
+        </div>
+        <div id="code-panel" class="panel">
+            <div class="panel-header">
+                <h2>코드 관리</h2>
+                <button id="add-code-btn" class="add-btn" disabled>+ 추가</button>
+            </div>
+            <div id="code-table-container" class="table-container">
+                <div class="placeholder">상위 그룹코드를 선택하세요.</div>
+            </div>
+        </div>
+    </div>
+    <div class="toolbar">
+        <button id="save-btn">저장</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="common_code_management.js"></script>
+</body>
+</html>

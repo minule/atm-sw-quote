@@ -1,0 +1,19 @@
+body {
+    background-color: #f4f7fa;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 24px;
+    padding: 24px;
+}
+
+.chart-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    height: 350px; /* 고정 높이 */
+}

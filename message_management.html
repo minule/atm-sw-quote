@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다국어 메시지 관리</title>
+    <link rel="stylesheet" href="message_management.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel">
+            <div class="panel-header">
+                <h2>다국어 메시지 관리</h2>
+                <div class="header-buttons">
+                    <div class="excel-import-group">
+                        <input type="file" id="excel-file-input" accept=".xlsx, .xls">
+                        <button id="import-excel-btn">엑셀 업로드</button>
+                    </div>
+                    <button id="add-message-btn" class="add-btn">+ 추가</button>
+                </div>
+            </div>
+            <div id="message-table-container" class="table-container">
+                <div class="placeholder">데이터 로딩 중...</div>
+            </div>
+        </div>
+    </div>
+    <div class="toolbar">
+        <button id="save-btn">저장</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+    <script src="message_management.js"></script>
+</body>
+</html>

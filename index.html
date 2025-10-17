@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM 사양 관리 시스템</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="gnb">
+            <div class="logo">ATM 사양 견적 시스템</div>
+            <ul>
+                <li class="gnb-item active" data-menu="spec">사양 관리</li>
+                <li class="gnb-item" data-menu="quote">견적 관리</li>
+                <li class="gnb-item" data-menu="sw">S/W 관리</li>
+                <li class="gnb-item" data-menu="system">시스템 관리</li>
+                <li class="gnb-item" data-menu="user">사용자 관리</li>
+                <li class="gnb-item" data-menu="auth">권한 관리</li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <nav class="lnb">
+                <ul class="lnb-menu active" id="lnb-spec">
+                    <li data-src="dashboard.html">대시 보드</li>
+                    <li data-src="product_management.html">제품 관리</li>
+                    <li data-src="part_management.html">부품 관리</li>
+                    <li data-src="spec_management.html">스펙 관리</li>
+
+                </ul>
+                <ul class="lnb-menu" id="lnb-quote">
+                    <li data-src="spec_search.html">사양 검색</li>
+                    <li data-src="not_implemented.html">사양 견적</li>
+                </ul>
+                <ul class="lnb-menu" id="lnb-sw">
+                    <li data-src="sw_management.html">S/W 관리</li>
+                    <li data-src="sw_view.html">S/W 현황 조회</li>
+                    <li data-src="app_sw_report.html">점유율 레포트</li>
+                </ul>
+                <ul class="lnb-menu" id="lnb-system">
+					<li data-src="common_code_management.html">공통 코드 관리</li>
+                    <li data-src="menu_management.html">메뉴 관리</li>
+                    <li data-src="message_management.html">다국어 메세지 관리</li>
+                    <li data-src="auth_management.html">권한 관리</li>
+                </ul>
+                <ul class="lnb-menu" id="lnb-user">
+                    <li data-src="not_implemented.html">사용자 관리</li>
+                    <li data-src="not_implemented.html">접속 이력</li>
+                </ul>
+                <ul class="lnb-menu" id="lnb-auth">
+                    <li data-src="not_implemented.html">권한 그룹</li>
+                    <li data-src="not_implemented.html">권한 관리</li>
+                </ul>                                                    
+            </nav>
+            <div id="lnb-toggle-btn"><span class="icon">&laquo;</span></div>
+            <main class="content-area">
+                <iframe name="content-frame" src="about:blank"></iframe>
+            </main>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

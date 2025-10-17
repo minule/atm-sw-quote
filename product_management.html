@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM 제품 BOM 관리</title>
+    <link rel="stylesheet" href="product_management.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>제품 탐색기</h2>
+            <div id="product-tree"></div>
+        </aside>
+        <div class="center-content">
+            <div class="top-pane">
+                <h3>제품 목록<span id="product-list-title" class="context-title"></span></h3>
+                <div id="product-list-container">
+                    <div class="placeholder">좌측 탐색기에서 모델을 선택하세요.</div>
+                </div>
+            </div>
+            <div class="bottom-pane">
+                <h3>유닛부품비교<span id="unit-compare-title" class="context-title"></span></h3>
+                <div id="unit-explorer-container">
+                    <div class="placeholder">상단에서 유닛을 선택하세요.</div>
+                </div>
+            </div>
+        </div>
+        <aside class="right-sidebar">
+            <h3>제품 상세 (BOM)<span id="bom-title" class="context-title"></span></h3>
+            <div id="bom-container">
+                <div class="placeholder">제품 목록에서 제품을 선택하세요.</div>
+            </div>
+        </aside>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="product_management.js"></script>
+</body>
+</html>

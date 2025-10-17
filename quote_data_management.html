@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>견적 기초 데이터 관리</title>
+    <link rel="stylesheet" href="quote_data_management.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-link active" data-tab="basic-data">견적 기초 데이터 관리</button>
+            <button class="tab-link" data-tab="part-cost">부품별 원가 상세 조회</button>
+        </div>
+
+        <div id="basic-data" class="tab-content active">
+            <div class="data-section">
+                <h3>가공비 단가</h3>
+                <table id="processing-cost-table">
+                    <!-- JS로 내용 채움 -->
+                </table>
+            </div>
+            <div class="data-section">
+                <h3>마진율</h3>
+                <table id="margin-rate-table">
+                    <!-- JS로 내용 채움 -->
+                </table>
+            </div>
+            <div class="data-section">
+                <h3>물류비</h3>
+                <table id="logistics-cost-table">
+                    <!-- JS로 내용 채움 -->
+                </table>
+                 <div class="add-form">
+                    <h4>신규 물류비 추가</h4>
+                    <select id="new-country-select"></select>
+                    <input type="number" id="new-logistics-cost-input" placeholder="단가 입력">
+                    <button id="add-logistics-cost-btn">추가</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="part-cost" class="tab-content">
+            <div class="search-section">
+                <h3>부품 원가 조회</h3>
+                <input type="text" id="part-search-input" placeholder="부품 번호 검색...">
+            </div>
+            <div id="part-cost-details">
+                <p class="placeholder">부품을 검색하여 선택하세요.</p>
+            </div>
+        </div>
+    </div>
+    <script src="quote_data_management.js"></script>
+</body>
+</html>

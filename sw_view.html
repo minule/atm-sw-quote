@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SW 현황 조회</title>
+    <link rel="stylesheet" href="sw_view.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SW 현황 조회 (공급업체 상세)</h1>
+        <div class="toolbar">
+            <div id="filters"></div>
+            <button id="search-btn">검색</button>
+            <div class="excel-import-group">
+                <input type="file" id="excel-file-input" accept=".xlsx, .xls">
+                <button id="import-excel-btn">엑셀 업로드</button>
+				<button id="add-new-btn">등록</button>
+				<button id="modify-btn">삭제</button>
+            </div>
+        </div>
+        <div id="sw-view-container">
+            <div class="placeholder">데이터 로딩 중...</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="sw_view.js"></script>
+	<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+</body>
+</html>

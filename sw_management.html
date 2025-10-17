@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SW 관리</title>
+    <link rel="stylesheet" href="sw_management.css">
+</head>
+    <div class="container">
+        <div class="page-header">
+            <h1>SW 현황조회</h1>
+        </div>
+        
+        <div class="panel">
+            <div id="code-filters-section">
+                <h2>SW 종류선택</h2>
+                <div id="code-filters-container">
+                    <!-- JS로 채워질 코드관리 검색 필터 -->
+                    <div class="placeholder">검색 조건 로딩 중...</div>
+                </div>
+            </div>
+
+            <div id="customer-filters-section">
+                <h2>국가/고객 선택</h2>
+                <div id="customer-filters-container">
+                    <!-- JS로 채워질 고객정보 검색 필터 -->
+                </div>
+            </div>
+
+             <div class="filter-actions">
+                <button id="search-btn">검색</button>
+                <button id="reset-btn">초기화</button>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>결과</h2>
+            <div id="table-container">
+                <!-- JS로 채워질 결과 테이블 -->
+                <div class="placeholder">검색 조건을 선택하고 검색 버튼을 눌러주세요.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 신규 등록 모달 -->
+    <div id="add-new-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>신규 SW 정보 등록</h2>
+            <form id="add-new-form">
+                <div class="form-grid">
+                    <!-- JS로 채워질 폼 필드 -->
+                </div>
+                <div class="modal-actions">
+                    <button type="submit" id="save-btn">저장</button>
+                    <button type="button" id="cancel-btn">취소</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 엑셀 업로드 모달 -->
+    <div id="excel-upload-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>엑셀(CSV) 업로드</h2>
+            <div class="upload-instructions">
+                <p>아래 컬럼 순서에 맞는 CSV 파일을 업로드해주세요. 첫 행은 헤더이므로 실제 데이터는 두 번째 행부터 시작해야 합니다.</p>
+                <ol>
+                    <li>공급업체</li>
+                    <li>운영체제</li>
+                    <li>메시지 프로토콜</li>
+                    <li>호스트/서버 SW</li>
+                    <li>네트워크 중앙 HW</li>
+                    <li>관리/모니터링 SW</li>
+                    <li>원격 SW 배포</li>
+                    <li>현금 예측/관리 SW</li>
+                    <li>CRM/광고/마케팅 SW</li>
+                    <li>전용 ATM 보안 SW</li>
+                    <li>응용 SW</li>
+					<li>국가</li>
+					<li>고객</li>
+                    <li>ATM 대수</li>
+                </ol>
+                <input type="file" id="csv-file-input" accept=".csv">
+            </div>
+            <div class="modal-actions">
+                <button type="button" id="upload-btn">업로드</button>
+                <button type="button" id="cancel-upload-btn">취소</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="sw_management.js"></script>
+</body>
+</html>

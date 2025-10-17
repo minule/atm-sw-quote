@@ -1,0 +1,153 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f7fa;
+    color: #333;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.panel {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    min-height: 0;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9ecef;
+    background-color: #f8f9fa;
+}
+
+.panel-header h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.table-container {
+    overflow-y: auto;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+thead {
+    background-color: #f8f9fa;
+}
+
+th, td {
+    padding: 10px 12px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+    vertical-align: middle;
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+tbody tr.selected {
+    background-color: #e9f5ff;
+}
+
+.placeholder {
+    padding: 40px;
+    text-align: center;
+    color: #888;
+}
+
+/* 버튼 스타일 */
+button {
+    padding: 5px 12px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
+
+.add-btn {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.add-btn:hover {
+    background-color: #218838;
+}
+
+.add-btn:disabled {
+    background-color: #a5d6a7;
+    border-color: #a5d6a7;
+    cursor: not-allowed;
+}
+
+.toolbar {
+    padding-top: 15px;
+    text-align: right;
+}
+
+#save-btn {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    padding: 8px 20px;
+}
+
+#save-btn:hover {
+    background-color: #0069d9;
+}
+
+.item-actions button {
+    margin-right: 5px;
+    font-size: 11px;
+    padding: 3px 8px;
+}
+
+.edit-btn { border-color: #ffc107; color: #ffc107; }
+.delete-btn { border-color: #dc3545; color: #dc3545; }
+.edit-btn:hover { background-color: #ffc107; color: #fff; }
+.delete-btn:hover { background-color: #dc3545; color: #fff; }
+
+/* 인라인 편집 스타일 */
+.edit-item-row input {
+    width: 90%;
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.edit-item-row button {
+    border: none;
+    color: white;
+}
+
+.save-row-btn { background-color: #007bff; }
+.cancel-row-btn { background-color: #6c757d; }

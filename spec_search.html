@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM 사양 검색기</title>
+    <link rel="stylesheet" href="spec_search.css">
+</head>
+<body>
+    <!--header>
+        <h1>ATM 사양 검색기</h1>
+    </header-->
+    <main class="container">
+        <section id="spec-selector-section" class="card">
+            <div class="content-wrapper">
+                <h2>1. 고객 요구 사양</h2>
+                <div id="spec-filters">
+                    <!-- 제품군, 모델 필터가 여기에 동적으로 추가됩니다. -->
+                </div>
+                <div id="spec-options">
+                    <!-- 유닛별 스펙 항목이 여기에 동적으로 추가됩니다. -->
+                </div>
+                <button id="search-button">검색</button>
+            </div>
+        </section>
+        <section id="search-results-section" class="card">
+            <div class="content-wrapper">
+                <h2>2. 양산제품 사양비교</h2>
+                <div id="search-results">
+                    <div class="placeholder">표시할 데이터가 없습니다</div>
+                </div>
+            </div>
+        </section>
+        <section id="optimal-combination-section" class="card">
+            <div class="content-wrapper">
+                <h2>3. 최적 조합 구성</h2>
+                <div id="optimal-combination">
+                    <div class="placeholder">표시할 데이터가 없습니다</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="spec_search.js"></script>
+</body>
+</html>

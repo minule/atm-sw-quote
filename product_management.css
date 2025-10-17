@@ -1,0 +1,275 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* 페이지 스크롤 방지 */
+    font-size: 13px; /* BOM 페이지 기본 폰트 크기 */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    background-color: #f5f7fa;
+}
+
+/* 사이드바 (좌측, 우측) */
+.sidebar, .right-sidebar {
+    flex: 0 0 280px;
+    background-color: #fff;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border: none;
+}
+
+.sidebar {
+    border-right: 1px solid #e9ecef;
+}
+
+.right-sidebar {
+    border-left: 1px solid #e9ecef;
+}
+
+.sidebar h2, .right-sidebar h3, .center-content h3 {
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.context-title {
+    color: #007bff;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+#product-tree, #bom-container {
+    padding: 10px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* 중앙 콘텐츠 */
+.center-content {
+    flex-grow: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 15px;
+}
+
+.top-pane, .bottom-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+#product-list-container, #unit-explorer-container {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #888;
+    font-size: 14px;
+}
+
+/* 테이블 공통 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th, td {
+    border-bottom: 1px solid #f1f1f1;
+    padding: 10px 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+thead th {
+    background-color: #f8f9fa;
+    font-weight: 500;
+    color: #495057;
+    position: sticky;
+    top: 0;
+}
+
+tbody tr:hover {
+    background-color: #f1f8ff;
+}
+
+/* 제품 목록 테이블 */
+#product-list-container tr:hover {
+    cursor: pointer;
+}
+
+/* 유닛 부품 비교 테이블 */
+#unit-explorer-container td:first-child, #unit-explorer-container th:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #fff;
+}
+
+#unit-explorer-container thead th:first-child {
+    z-index: 2;
+    background-color: #f8f9fa;
+}
+
+/* BOM 카드 스타일 */
+#bom-container {
+    gap: 10px;
+}
+
+.bom-unit-card {
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.bom-unit-card-header {
+    background-color: #fdfdfe;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e9ecef;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.bom-unit-card-header span {
+    font-weight: 400;
+    color: #555;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.bom-spec-list {
+    list-style-type: none;
+    padding: 10px 15px;
+    margin: 0;
+    font-size: 13px;
+}
+
+.bom-spec-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.bom-spec-list .spec-name {
+    color: #555;
+}
+
+.bom-spec-list .spec-value {
+    font-weight: 500;
+    color: #222;
+}
+
+/* 트리 스타일 */
+.tree-item ul {
+    list-style-type: none;
+    padding-left: 22px;
+    border-left: 1px solid #f0f0f0;
+    margin-left: 8px;
+}
+
+.tree-item > div {
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.tree-item > div:hover {
+    background-color: #f1f3f5;
+}
+
+.tree-item .icon {
+    margin-right: 6px;
+    font-size: 16px;
+    width: 16px;
+    text-align: center;
+}
+
+.tree-item .model {
+    padding: 6px 8px;
+    border-radius: 5px;
+}
+
+.tree-item .model:hover {
+    background-color: #e9f5ff;
+}
+
+.tree-item .model.selected {
+    background-color: #fff3cd;
+    font-weight: 500;
+}
+
+.tree-item.collapsed > ul {
+    display: none;
+}
+
+/* 기타 */
+.needs-mapping-marker {
+    margin-left: 5px;
+}
+
+.selected-row > td {
+    background-color: #dbeafe !important;
+}
+
+.unmapped-spec-placeholder .click-guide {
+    font-size: 12px;
+    color: #007bff;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* 버튼 스타일 */
+.edit-spec-btn, .save-new-spec-btn, .save-edited-spec-btn, .cancel-edit-btn {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+.save-new-spec-btn, .save-edited-spec-btn {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.save-new-spec-btn:hover, .save-edited-spec-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}

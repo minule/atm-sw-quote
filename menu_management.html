@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 관리</title>
+    <link rel="stylesheet" href="menu_management.css">
+</head>
+<body>
+    <div class="container">
+        <div id="parent-menu-panel" class="panel">
+            <div class="panel-header">
+                <h2>상위 메뉴</h2>
+                <button id="add-parent-btn" class="add-btn">+ 추가</button>
+            </div>
+            <div id="parent-menu-list" class="list-container"></div>
+        </div>
+        <div id="sub-menu-panel" class="panel">
+            <div class="panel-header">
+                <h2>하위 메뉴</h2>
+                <button id="add-sub-menu-btn" class="add-btn" disabled>+ 추가</button>
+            </div>
+            <div id="sub-menu-table-container" class="table-container">
+                <div class="placeholder">상위 메뉴를 선택하세요.</div>
+            </div>
+        </div>
+    </div>
+    <div class="toolbar">
+        <button id="save-btn">저장</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="menu_management.js"></script>
+</body>
+</html>
